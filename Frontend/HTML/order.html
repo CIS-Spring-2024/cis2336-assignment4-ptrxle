@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order: Le's Restaurant</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1>What are you ordering today at Le's Restaurant?</h1>
+        <nav id="navbar01">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+        
+    <main class="content">
+        <form id="orderform">
+            <h2>Place Your Order Here!</h2>
+            <div class="form01">
+                <label for="appetizer">Select Appetizer:</label>
+                <select id="appetizer" name="appetizer">
+                    <option value="">--Choose an appetizer--</option>
+                    <option value="caprese" data-price="8.99">Caprese Salad - $8.99</option>
+                    <option value="garlic" data-price="6.99">Garlic Bread - $6.99</option>
+                </select>
+                <input type="number" id="appetizer-quantity" name="appetizer-quantity" placeholder="Quantity" min="1" max="10">
+                <span class="subtotal" id="appetizer-subtotal"></span>
+            </div>
+
+            <div class="form01">
+                <label for="main-course">Select Main Course:</label>
+                <select id="main-course" name="main-course">
+                    <option value="">--Choose a main course--</option>
+                    <option value="carbonara" data-price="12.99">Spaghetti Carbonara - $12.99</option>
+                    <option value="pizza" data-price="10.99">Margherita Pizza - $10.99</option>
+                    <option value="salmon" data-price="15.99">Grilled Salmon - $15.99</option>
+                    <option value="tenderloin" data-price="18.99">Beef Tenderloin - $18.99</option>
+                </select>
+                <input type="number" id="main-course-quantity" name="main-course-quantity" placeholder="Quantity" min="1" max="10">
+                <span class="subtotal" id="main-course-subtotal"></span>
+            </div>
+
+            <div class="form01">
+                <label for="dessert">Select Dessert:</label>
+                <select id="dessert" name="dessert">
+                    <option value="">--Choose a dessert--</option>
+                    <option value="tiramisu" data-price="7.99">Tiramisu - $7.99</option>
+                    <option value="cannoli" data-price="5.99">Cannoli - $5.99</option>
+                </select>
+                <input type="number" id="dessert-quantity" name="dessert-quantity" placeholder="Quantity" min="1" max="10">
+                <span class="subtotal" id="dessert-subtotal"></span>
+            </div>
+
+            <div class="form01">
+                <label for="drinks">Select Drink:</label>
+                <select id="drink" name="drink">
+                    <option value="">--Choose a drink--</option>
+                    <option value="espresso" data-price="3.99">Espresso - $3.99</option>
+                    <option value="limoncello" data-price="5.49">Limoncello - $5.49</option>
+                </select>
+                <input type="number" id="drink-quantity" name="drink-quantity" placeholder="Quantity" min="1" max="10">
+                <span class="subtotal" id="drink-subtotal"></span>
+            </div>
+
+            <button type="submit">Submit Order</button>
+            <p id="order-feedback" class="error"></p>
+            <p id="total-amount"></p>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Le's Restaurant. All rights reserved.</p>
+    </footer>
+    <script src="../JavaScript/order.js"></script>
+</body>
+</html>
